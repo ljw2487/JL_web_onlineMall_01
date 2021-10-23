@@ -1,0 +1,23 @@
+{
+  "name": "jl_web_onlinemall_01",
+  "version": "1.0.0",
+  "description": "一个web在线商城的项目",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljw2487/JL_web_onlineMall_01.git"
+  },
+  "author": "Jarvan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ljw2487/JL_web_onlineMall_01/issues"
+  },
+  "homepage": "https://github.com/ljw2487/JL_web_onlineMall_01#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
