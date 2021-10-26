@@ -10,11 +10,18 @@ abc.html
 
 #scss
 .sass-cache/
-scss/
-*.map
+# scss/
+# *.map
 
 #启动文件
 *.bat
 
 #依赖文件
 node_modules/
+
+#备份文件
+*.备份
+*.备份1
+
+#废弃文件
+*.old.*
