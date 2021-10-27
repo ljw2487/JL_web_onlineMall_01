@@ -47,6 +47,12 @@ $all: all 0.2s ease-in-out;
 // ===============================
 // topArea
 .topArea {
+  background: {
+    image: url("../img/topBac.png");
+    attachment: fixed;
+    size: 120px;
+    position: 100% 100%;
+  };
   background-color: $gray;
   > .centerBox {
     justify-content: space-between;
@@ -177,8 +183,11 @@ $all: all 0.2s ease-in-out;
         > ul {
           position: absolute;
           box-shadow: 1px 1px 5px 1px $dark;
+          z-index: 10;
+          // visibility: hidden;
+          // transition: $all;
           > li {
-            display: block;
+            // display: block;
             padding: 10px 50px;
             color: $dark;
             background-color: $light;
@@ -191,7 +200,12 @@ $all: all 0.2s ease-in-out;
           }
         }
       }
-      &:first-child a:hover {
+      // &:first-child a:hover {
+      //   background-color: $light;
+      //   color: $red;
+      //   font-weight: bold;
+      // }
+      &:first-child li:hover > a {
         background-color: $light;
         color: $red;
         font-weight: bold;

@@ -22,6 +22,10 @@ a, a:hover {
       width: 1000px; } }
 
 .topArea {
+  background-image: url("../img/topBac.png");
+  background-attachment: fixed;
+  background-size: 120px;
+  background-position: 100% 100%;
   background-color: #3B3B3B; }
   .topArea > .centerBox {
     justify-content: space-between;
@@ -112,9 +116,9 @@ a, a:hover {
         border-right: 2px solid #3B3B3B; }
       .navArea > .centerBox > ul > li > ul {
         position: absolute;
-        box-shadow: 1px 1px 5px 1px #a09999; }
+        box-shadow: 1px 1px 5px 1px #a09999;
+        z-index: 10; }
         .navArea > .centerBox > ul > li > ul > li {
-          display: block;
           padding: 10px 50px;
           color: #a09999;
           background-color: #F1F1F1;
@@ -123,7 +127,7 @@ a, a:hover {
           .navArea > .centerBox > ul > li > ul > li:hover {
             padding-left: 55px;
             padding-right: 45px; }
-    .navArea > .centerBox > ul:first-child a:hover {
+    .navArea > .centerBox > ul:first-child li:hover > a {
       background-color: #F1F1F1;
       color: #BE1920;
       font-weight: bold; }

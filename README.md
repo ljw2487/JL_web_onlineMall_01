@@ -1,7 +1,7 @@
 # Web_Project
 一个web在线商城的项目
 
-> 自制手办商城，用于练习`css`,`scss`,`js`,`jQuery`,`mySQL`以及服务器搭建等技术
+> 自制手办商城，用于练习`css`,`js`,`jQuery`,`mySQL`以及服务器搭建等技术
 
 #### 使用组件
 - express
@@ -61,5 +61,6 @@
   - stylesheet.css (scss)
 - js
   - app.js (run server) - node app.js
+  - nav.js 
 - sql
 
