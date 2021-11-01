@@ -3,7 +3,7 @@
 
 > 自制手办商城，用于练习`css`,`js`,`jQuery`,`mySQL`以及服务器搭建等技术
 >
-> ` 项目已转移至vue -> jl_web_figuremall
+> ` 项目已转移至vue -> jl_web_figuremall `
 
 #### 使用组件
 - express
