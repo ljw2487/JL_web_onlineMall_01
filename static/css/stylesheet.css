@@ -70,7 +70,7 @@ a, a:hover {
       .topArea > .centerBox > div #search:hover {
         box-shadow: inset 1px 1px 1px 1px #505050, inset -1px -1px 1px 1px #2c2c2c; }
     .topArea > .centerBox > div #cart {
-      width: 100px;
+      width: 110px;
       border-radius: 100px;
       cursor: pointer;
       background-color: #2A2A2A; }
@@ -81,6 +81,7 @@ a, a:hover {
         width: 30px;
         padding: 6px;
         margin-left: 5px;
+        margin-top: 1px;
         background-image: url("../img/cart.svg");
         background-size: 100% 100%;
         background-origin: content-box;
@@ -89,50 +90,127 @@ a, a:hover {
         box-shadow: inset 1px 1px 1px 1px #505050, inset -1px -1px 1px 1px #2c2c2c; }
       .topArea > .centerBox > div #cart > span {
         float: left;
-        height: 30px;
-        margin-left: 5px;
+        height: 32px;
+        margin-left: 3px;
         font-size: 14px;
         color: #F1F1F1;
-        line-height: 30px;
-        transition: all 0.2s ease-in-out; }
-      .topArea > .centerBox > div #cart:hover > span {
-        color: #EAA023; }
+        line-height: 32px; }
+        .topArea > .centerBox > div #cart > span > span {
+          color: #EAA023;
+          font-weight: bold; }
 
 .navArea {
   background-color: #2A2A2A; }
-  .navArea > .centerBox {
+  .navArea .centerBox {
     justify-content: space-between;
     align-items: center;
     font-size: 14px; }
-    .navArea > .centerBox > ul > li {
-      float: left; }
-      .navArea > .centerBox > ul > li > a {
-        display: inline-block;
-        padding: 10px 50px;
+    .navArea .centerBox .navL1 > li {
+      position: relative;
+      float: left;
+      padding: 10px 0;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out; }
+      .navArea .centerBox .navL1 > li > a {
+        padding: 0 50px;
         color: #F1F1F1;
-        border-left: 2px solid #3B3B3B;
+        text-align: center;
+        border-left: 1px solid #a09999; }
+      .navArea .centerBox .navL1 > li:last-child > a {
+        border-right: 1px solid #a09999; }
+      .navArea .centerBox .navL1 > li:hover {
+        background-color: #F1F1F1; }
+        .navArea .centerBox .navL1 > li:hover > a {
+          color: #BE1920;
+          font-weight: bold; }
+    .navArea .centerBox .navL2 {
+      position: absolute;
+      top: 40px;
+      box-shadow: 0px 1px 3px #a09999;
+      border-radius: 0 0 0 5px;
+      z-index: 50; }
+      .navArea .centerBox .navL2 > li {
+        padding: 10px 0;
+        background-color: white;
         transition: all 0.2s ease-in-out; }
-      .navArea > .centerBox > ul > li:last-child > a {
-        border-right: 2px solid #3B3B3B; }
-      .navArea > .centerBox > ul > li > ul {
-        position: absolute;
-        box-shadow: 1px 1px 5px 1px #a09999;
-        z-index: 10; }
-        .navArea > .centerBox > ul > li > ul > li {
-          padding: 10px 50px;
+        .navArea .centerBox .navL2 > li:last-child {
+          border-radius: 0 0 0 5px; }
+        .navArea .centerBox .navL2 > li > a {
+          display: inline-block;
+          box-sizing: border-box;
+          width: 157px;
+          padding-left: 50px;
           color: #a09999;
-          background-color: #F1F1F1;
+          text-align: left;
+          transition: all 0.2s ease-in-out; }
+          .navArea .centerBox .navL2 > li > a > span {
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            margin-bottom: 3px;
+            background-color: #a09999;
+            transition: all 0.2s ease-in-out; }
+        .navArea .centerBox .navL2 > li:hover {
+          background-color: #F1F1F1; }
+          .navArea .centerBox .navL2 > li:hover > a {
+            color: #BE1920;
+            font-weight: bold; }
+            .navArea .centerBox .navL2 > li:hover > a > span {
+              width: 8px;
+              margin-left: 3px;
+              background-color: #BE1920; }
+    .navArea .centerBox .navL3 {
+      position: absolute;
+      display: flex;
+      overflow: hidden;
+      left: 158px;
+      top: 0;
+      background-color: white;
+      box-shadow: 0px 1px 3px #a09999;
+      border-radius: 0 0 5px 5px;
+      z-index: 51; }
+      .navArea .centerBox .navL3 > div:first-child {
+        width: 400px;
+        min-height: 270px;
+        padding: 20px;
+        cursor: default; }
+        .navArea .centerBox .navL3 > div:first-child > div > h2 {
+          display: inline-block; }
+        .navArea .centerBox .navL3 > div:first-child > div > span {
+          float: right;
+          color: #a09999;
+          font-size: 12px;
+          line-height: 28px;
           cursor: pointer;
           transition: all 0.2s ease-in-out; }
-          .navArea > .centerBox > ul > li > ul > li:hover {
-            padding-left: 55px;
-            padding-right: 45px; }
-    .navArea > .centerBox > ul:first-child li:hover > a {
-      background-color: #F1F1F1;
-      color: #BE1920;
-      font-weight: bold; }
-    .navArea > .centerBox > ul:last-child a:hover {
-      font-weight: bold; }
+          .navArea .centerBox .navL3 > div:first-child > div > span:hover {
+            color: #BE1920;
+            padding-left: 2px; }
+        .navArea .centerBox .navL3 > div:first-child > ul {
+          margin-top: 10px;
+          padding-top: 15px;
+          border-top: 1px solid #a09999; }
+          .navArea .centerBox .navL3 > div:first-child > ul > li {
+            float: left;
+            margin: 5px 10px;
+            padding: 5px 25px;
+            border-radius: 100px;
+            background-color: #F1F1F1;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out; }
+            .navArea .centerBox .navL3 > div:first-child > ul > li > a {
+              width: 100%;
+              color: #a09999;
+              text-align: center;
+              transition: all 0.2s ease-in-out; }
+            .navArea .centerBox .navL3 > div:first-child > ul > li:hover {
+              box-shadow: 1px 1px 1px #a09999; }
+              .navArea .centerBox .navL3 > div:first-child > ul > li:hover > a {
+                color: #BE1920;
+                font-weight: bold; }
+      .navArea .centerBox .navL3 > div:last-child {
+        width: 200px;
+        background: linear-gradient(128deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%); }
 
 .carouselArea > .carouselBox .swiper-slide a img {
   display: block;
@@ -148,5 +226,24 @@ a, a:hover {
 .carouselArea > .carouselBox .swiper-pagination .swiper-pagination-bullet-active {
   width: 25px;
   border-radius: 1000px; }
+
+.productArea {
+  padding-bottom: 50px;
+  background-color: #1F232E; }
+  .productArea .centerBox {
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .productArea .centerBox > div:first-child {
+      width: 100%;
+      padding: 50px 0 20px;
+      color: #F1F1F1;
+      line-height: 100%; }
+      .productArea .centerBox > div:first-child h1 {
+        display: inline-block; }
+      .productArea .centerBox > div:first-child span {
+        float: right; }
+    .productArea .centerBox > .hotBox {
+      border-radius: 2px;
+      background-color: #1F9A98; }
 
 /*# sourceMappingURL=stylesheet.css.map */

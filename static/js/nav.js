@@ -1,20 +1,21 @@
-let $cFirstItems = $('.navArea>.centerBox>ul:first-child>li')
-let $cSecond = $('.navArea>.centerBox>ul:first-child>li>ul')
+let $navL1_li = $(".navL1 > li")
+let $navL2_li = $(".navL2 > li")
 
-// 1. 一级中子元素 划入事件 - 展开二级
-// .filter(':not(:animated)') 用于终止
-$cFirstItems.mouseenter(function () { 
-  $(this).children().eq(1).stop(true).slideDown("fast")
-});
-
-$cFirstItems.mouseleave(function () { 
-  $(this).children().eq(1).stop(true).slideUp("fast")
-});
-
-// 2. 二级中子元素 划入事件 - 展开三级
-
-
-// 3. 划出三级 隐藏三级
-
-
-// 4. 划出二级 隐藏二级
+// 一级菜单hover关联二级菜单
+$navL1_li.hover(
+  function () {
+    $(this).find('.navL2').stop(true).slideDown(300)
+  },
+  function () {
+    $(this).find('.navL2').stop(true).slideUp(200)
+  }
+)
+// 二级菜单hover关联三级菜单
+$navL2_li.hover(
+  function () {
+    $(this).find('.navL3').stop(true,false).show(300)
+  },
+  function () {
+    $(this).find('.navL3').stop(true,false).hide(200)
+  }
+)

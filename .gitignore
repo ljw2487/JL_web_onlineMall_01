@@ -25,3 +25,6 @@ node_modules/
 
 #废弃文件
 *.old.*
+
+#vscode-ive
+.vscode/

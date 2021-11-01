@@ -117,7 +117,7 @@ $all: all 0.2s ease-in-out;
         }
       }
       #cart {
-        width: 100px;
+        width: 110px;
         border-radius: 100px;
         cursor: pointer;
         background-color: $darkGray;
@@ -128,12 +128,22 @@ $all: all 0.2s ease-in-out;
           width: 30px;
           padding: 6px;
           margin-left: 5px;
+          margin-top: 1px;
           background: {
             image: url('../img/cart.svg');
             size: 100% 100%;
             origin: content-box;
             repeat: no-repeat;
           };
+          // > div {
+          //   padding: 1px 2px;
+          //   color: $light;
+          //   font-size: 12px;
+          //   line-height: 12px;
+          //   text-align: center;
+          //   border-radius: 10px;
+          //   background-color: #BE1920;
+          // }
         }
         &:hover {
           // border: 1px solid $red;
@@ -143,16 +153,20 @@ $all: all 0.2s ease-in-out;
         }
         > span {
           float: left;
-          height: 30px;
-          margin-left: 5px;
+          height: 32px;
+          margin-left: 3px;
           font-size: 14px;
           color: $light;
-          line-height: 30px;
-          transition: $all;
+          line-height: 32px;
+          // transition: $all;
+          > span {
+            color: $yellow;
+            font-weight: bold;
+          }
         }
-        &:hover > span {
-          color: $yellow;
-        }
+        // &:hover > span {
+        //   color: $yellow;
+        // }
       }
     }
   }
@@ -162,56 +176,152 @@ $all: all 0.2s ease-in-out;
 // navArea
 .navArea {
   background-color: $darkGray;
-  > .centerBox {
+  .centerBox {
     justify-content: space-between;
     align-items: center;
-    font-size: $nm;
-    > ul {
+    font-size: 14px;
+    .navL1 > li {
+      position: relative; 
+      float: left;
+      padding: 10px 0;
+      cursor: pointer;
+      transition: $all;
+      > a {
+        padding: 0 50px;
+        color: $light;
+        text-align: center;
+        border-left: 1px solid $dark;
+      }
+      &:last-child > a {
+        border-right: 1px solid $dark;
+      }
+      &:hover {
+        background-color: $light;
+        > a {
+          color: $red;
+          font-weight: bold;
+        }
+      }
+    }
+    // .navLeft > li:hover {
+    //   background-color: $light;
+    //   > a {
+    //     color: $red;
+    //     font-weight: bold;
+    //   }
+    // }
+    // .navRight > li:hover {
+    //   > a {
+    //     font-weight: bold;
+    //   }
+    // }
+    .navL2 {
+      position: absolute;
+      top: 40px;
+      box-shadow: 0px 1px 3px $dark;
+      border-radius: 0 0 0 5px;
+      z-index: 50;
       > li {
-        float: left;
+        padding: 10px 0;
+        background-color: white;
+        transition: $all;
+        &:last-child {
+          border-radius: 0 0 0 5px;
+        }
         > a {
           display: inline-block;
-          padding: 10px 50px;
-          color: $light;
-          border-left: 2px solid $gray;
+          box-sizing: border-box;
+          width: 157px;
+          padding-left: 50px;
+          color: $dark;
+          text-align: left;
           transition: $all;
-        }
-        &:last-child > a {
-          border-right: 2px solid $gray;
-        }
-        // 二级菜单
-        > ul {
-          position: absolute;
-          box-shadow: 1px 1px 5px 1px $dark;
-          z-index: 10;
-          // visibility: hidden;
-          // transition: $all;
-          > li {
-            // display: block;
-            padding: 10px 50px;
-            color: $dark;
-            background-color: $light;
-            cursor: pointer;
+          > span {
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            margin-bottom: 3px;
+            background-color: $dark;
             transition: $all;
-            &:hover {
-              padding-left: 55px;
-              padding-right: 45px;
+          }
+        }
+        &:hover {
+          background-color: $light;
+          > a {
+            color: $red;
+            font-weight: bold;
+            > span {
+              width: 8px;
+              margin-left: 3px;
+              background-color: $red;
             }
           }
         }
       }
-      // &:first-child a:hover {
-      //   background-color: $light;
-      //   color: $red;
-      //   font-weight: bold;
-      // }
-      &:first-child li:hover > a {
-        background-color: $light;
-        color: $red;
-        font-weight: bold;
+    }
+    .navL3 {
+      position: absolute;
+      display: flex;
+      overflow: hidden;
+      left: 158px;
+      top: 0;
+      background-color: white;
+      box-shadow: 0px 1px 3px $dark;
+      border-radius: 0 0 5px 5px;
+      z-index: 51;
+      > div:first-child {
+        width: 400px;
+        min-height: 270px;
+        padding: 20px;
+        cursor: default;
+        > div {
+          > h2 {
+            display: inline-block;
+          }
+          > span {
+            float: right;
+            color: $dark;
+            font-size: 12px;
+            line-height: 28px;
+            cursor: pointer;
+            transition: $all;
+            &:hover {
+              color: $red;
+              padding-left: 2px;
+            }
+          }
+        }
+        > ul {
+          margin-top: 10px;
+          padding-top: 15px;
+          border-top: 1px solid $dark;
+          > li {
+            float: left;
+            margin: 5px 10px;
+            padding: 5px 25px;
+            border-radius: 100px;
+            background-color: $light;
+            cursor: pointer;
+            transition: $all;
+            > a {
+              width: 100%;
+              color: $dark;
+              text-align: center;
+              transition: $all;
+            }
+            &:hover {
+              box-shadow: 1px 1px 1px $dark;
+              > a {
+                color: $red;
+                font-weight: bold;
+              }
+            }
+          }
+        }
       }
-      &:last-child a:hover {
-        font-weight: bold;
+      > div:last-child {
+        width: 200px;
+        background: linear-gradient(128deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
       }
     }
   }
@@ -249,4 +359,28 @@ $all: all 0.2s ease-in-out;
 
 // ===============================
 // productArea
+.productArea {
+  padding-bottom: 50px;
+  background-color: $darkBlue;
+  .centerBox {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    > div:first-child {
+      width: 100%;
+      padding: 50px 0 20px;
+      color: $light;
+      line-height: 100%;
+      h1 {
+        display: inline-block;
+      }
+      span {
+        float: right;
+      }
+    }
+    > .hotBox {
+      border-radius: 2px;
+      background-color: #1F9A98;
+    }
+  }
+}
 
